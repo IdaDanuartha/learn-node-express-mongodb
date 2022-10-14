@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
         res.render('authors/index', { authors: authors, searchOptions: req.query })
     } catch (error) {
-        res.redirect('/')
+        res.redirect('/authors')
     }
 })
 
@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
     try {
         const newAuthor = await author.save()
 
+        // res.redirect('books/${newAuthor.id}')
         res.redirect('authors')
     } catch (error) {
         res.render('authors/create', {
