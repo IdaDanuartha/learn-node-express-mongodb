@@ -1,5 +1,5 @@
 <h2>New Book</h2>
-<form action="/books/store" method="post" enctype="multipart/form-data">
+<form action="/books/store" method="post">
     <div>
         <label for="title">Title</label>
         <input type="text" id="title" name="title" value="<%= book.name %>">
@@ -27,7 +27,7 @@
     </div>
     <div>
         <label for="cover">Cover</label>
-        <input type="file" name="cover">
+        <input type="file" name="cover" class="filepond">
     </div>
     <div>
         <label for="description">Description</label>
